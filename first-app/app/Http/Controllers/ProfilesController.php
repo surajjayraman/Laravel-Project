@@ -4,11 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\User; // Add a semicolon at the end of this line
+
+
 class ProfilesController extends Controller
 {
     //
-    public function index()
+    public function index($user)
     {
-        return view('home');
+        // dd($user);
+        // dd(User::find($user));
+        $username = User::find($user);
+        return view('home', ['user' => $username]);
     }
 }
