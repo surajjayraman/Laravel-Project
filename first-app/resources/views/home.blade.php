@@ -19,13 +19,7 @@
             </div>
             <div class="pt-4 font-weight-bold">{{ $user->profile->title }}</div>
             <div>{{ $user->profile->description }}</div>
-            <div>{{ $user->profile->url }}</div>
-
-            <div>
-                <p>we are a non-profit organization that is supported by donations. we're a community of millions of
-                    people who are helping each other learn to code by building projects.</p>
-            </div>
-            <div><a href="#">www.freecodecamp.org</a></div>
+            <div><a href="#">{{ $user->profile->url }}</a></div>
         </div>
     </div>
     <div class="row pt-4">
