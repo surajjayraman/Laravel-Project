@@ -2,21 +2,12 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
-                </div>
-            </div>
+    <div class="row">
+        <div class="col-3 p-5">
+            <img src="https://www.freecodecamp.org/news/content/images/size/w2000/2024/06/img_12--1-.jpg" alt="logo" style="height: 50px; border-right: 1px solid #333333;" class="pr-3"
+            class="rounded-circle">
+        </div>
+        <div class="col-9">
         </div>
     </div>
 </div>
