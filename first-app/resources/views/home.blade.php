@@ -8,6 +8,7 @@
             class="rounded-circle">
         </div>
         <div class="col-9">
+            <h1>free code!</h1>
         </div>
     </div>
 </div>
