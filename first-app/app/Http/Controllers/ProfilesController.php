@@ -14,7 +14,7 @@ class ProfilesController extends Controller
     {
         // dd($user);
         // dd(User::find($user));
-        $username = User::find($user);
+        $username = User::findOrFail($user);
         return view('home', ['user' => $username]);
     }
 }
