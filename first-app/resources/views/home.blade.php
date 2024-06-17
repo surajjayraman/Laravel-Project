@@ -8,9 +8,10 @@
                 style="height: 50px; border-right: 1px solid #333333;" class="pr-3" class="rounded-circle">
         </div>
         <div class="col-9 pt-5">
-            <div>
+            <div class="d-flex justify-content-between">
                 <!-- <h1><?=$user?></h1> -->
                 <h1>{{ $user->username }}</h1>
+                <a href="#">Add New Post</a>
             </div>
             <div class="d-flex">
                 <div class="pr-4"><strong>153</strong> posts</div>
