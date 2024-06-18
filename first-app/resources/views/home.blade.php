@@ -8,7 +8,7 @@
                 style="height: 50px; border-right: 1px solid #333333;" class="pr-3" class="rounded-circle">
         </div>
         <div class="col-9 pt-5">
-            <div class="d-flex justify-content-between">
+            <div class="d-flex justify-content-between align-items-baseline">
                 <!-- <h1><?=$user?></h1> -->
                 <h1>{{ $user->username }}</h1>
                 <a href="#">Add New Post</a>
