@@ -2,40 +2,18 @@
 
 @section('content')
 <div class="container">
-    <div class="row">
-        <div class="col-3 p-5">
-            <img src="https://www.freecodecamp.org/news/content/images/size/w2000/2024/06/img_12--1-.jpg" alt="logo"
-                style="height: 50px; border-right: 1px solid #333333;" class="pr-3" class="rounded-circle">
+    <h1>Create Post</h1>
+    <form action="{{ route('posts.store') }}" method="POST">
+        @csrf
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" name="title" id="title" class="form-control">
         </div>
-        <div class="col-9 pt-5">
-            <div class="d-flex justify-content-between align-items-baseline">
-                <!-- <h1><?=$user?></h1> -->
-                <h1>{{ $user->username }}</h1>
-                <a href="#">Add New Post</a>
-            </div>
-            <div class="d-flex">
-                <div class="pr-4"><strong>153</strong> posts</div>
-                <div class="pr-4"><strong>23k</strong> followers</div>
-                <div class="pr-4"><strong>212</strong> following</div>
-            </div>
-            <div class="pt-4 font-weight-bold">{{ $user->profile->title }}</div>
-            <div>{{ $user->profile->description }}</div>
-            <div><a href="#">{{ $user->profile->url }}</a></div>
+        <div class="form-group">
+            <label for="content">Content</label>
+            <textarea name="content" id="content" class="form-control" rows="5"></textarea>
         </div>
-    </div>
-    <div class="row pt-4">
-        <div class="col-4">
-            <img src="https://www.freecodecamp.org/news/content/images/size/w2000/2024/06/img_12--1-.jpg" alt="logo"
-                class="w-100">
-        </div>
-        <div class="col-4">
-            <img src="https://www.freecodecamp.org/news/content/images/size/w2000/2024/06/img_12--1-.jpg" alt="logo"
-                class="w-100">
-        </div>
-        <div class="col-4">
-            <img src="https://www.freecodecamp.org/news/content/images/size/w2000/2024/06/img_12--1-.jpg" alt="logo"
-                class="w-100">
-        </div>
-    </div>
+        <button type="submit" class="btn btn-primary">Create Post</button>
+    </form>
 </div>
 @endsection
